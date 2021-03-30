@@ -43,6 +43,10 @@
 {
     box-sizing: border-box;
     margin: 0;
+}
+
+html
+{
     font-size: 14px;
 }
 
@@ -221,7 +225,11 @@ nav ul
     background-color: var(--color1);
 }
 
-.searchIcon { visibility: hidden; }
+.searchIcon
+{ 
+    visibility: hidden;
+    width: 0;
+}
 
 .searchCategories
 {
@@ -509,4 +517,342 @@ footer a
 {
     color: #000;
     text-decoration: none;
+}
+
+/* Small resolution screens */
+
+@media only screen and (max-width: 880px)
+{
+    /* General */
+
+    body
+    {
+        font-size: 1.6rem;
+    }
+
+    h1, h2
+    {
+        font-size: 2.4rem;
+    }
+
+    h3
+    {
+        font-size: 2rem;
+    }
+
+    section
+    {
+        margin: 20px;
+        padding: 0;
+    }
+
+    .foundRentalCard .imageCanvas, .activityCard .imageCanvas
+    {
+        padding-top: 58%;
+    }
+
+    .foundRentalCard:hover, .bestRentalCard:hover, .activityCard:hover
+    {
+        transform: initial;
+        box-shadow: 2px 2px 7px rgba(177, 177, 177, 0.4);
+    }
+
+    #rentalDiv
+    {
+        flex-direction: column;
+    }
+
+    #foundRentalSection, #bestRentalSection, #activitiesSection
+    {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 20px;
+        border-radius: 0;
+    }
+
+    .cardInfo
+    {
+        padding: 10px;
+    }
+
+    .cardInfo p:first-of-type { font-size: 1.7rem; }
+
+    .cardInfo span
+    {
+        font-size: 1.8rem;
+    }
+
+    .fa-star
+    {
+        font-size: 1.5rem;
+    }
+
+    /* Header */
+    header
+    {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #logo
+    {
+        flex: 4;
+        margin-left: 20px;
+        width: 100%;
+        order: 1;
+    }
+
+    nav
+    {
+        flex-basis: 100%;
+        width: 100%;
+        order: 3;
+    }
+
+    nav ul
+    {
+        padding: 0;
+    }
+
+    nav li
+    {
+        width: 50%;
+        text-align: center;
+    }
+
+    nav a
+    {
+        padding-top: 0;
+        padding-bottom: 20px;
+        border-bottom: 2px solid rgba(160,160,160,0.6);
+    }
+
+    nav a:hover
+    {
+        padding-top: 0;
+        border-top: initial;
+        border-bottom: 2px solid var(--color2);
+    }
+
+    header p:nth-of-type(2)
+    {
+        margin-right: 0;
+        margin-bottom: auto;
+        text-align: right;
+        order: 2;
+    }
+
+    header p:nth-of-type(2) a
+    {
+        padding: 0;
+        margin-top: 35px;
+        margin-right: 20px;
+        margin-left: auto;
+    }
+
+    /* Search Section */
+
+    #searchSection form
+    {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    #searchSection form input[type="search"]
+    {
+        width: 100%;
+        font-size: 1.6rem;
+    }
+
+    #searchSection form button
+    {
+        padding: 10px 11px;
+        margin-left: -8px;
+        border-radius: var(--border-radius);
+    }
+
+    #searchSection form button span
+    {
+        display: none;
+    }
+
+    .locationIcon, .searchIcon
+    {
+        padding: 1rem;
+        font-size: 1.7rem;
+    }
+
+    .locationIcon
+    {
+        width: 6rem;
+    }
+    
+    .searchIcon
+    {
+        visibility: visible;
+        width: initial;
+    }
+
+    .searchCategories
+    {
+        justify-content: flex-start;
+    }
+
+    .searchCategories p
+    {
+        margin-top: 20px;
+        margin-bottom: 5px;
+        padding: 0;
+        width: 100%;
+    }
+
+    .searchCategories label
+    {
+        margin: 10px 0;
+        margin-right: 10px;
+    }
+
+    .searchCategories label:hover i
+    {
+        border-color: #deebff;
+    }
+
+    .searchCategories i {
+        margin-right: -25px;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 30px;
+    }
+
+    .searchCategories span
+    {
+        padding: 1rem 2rem 1rem 3rem;
+        line-height: 1.7rem;
+    }
+
+    .searchInfo
+    {
+        margin-bottom: 40px;
+    }
+
+    .searchInfo i
+    {
+        width: 3.4rem;
+        height: 3.4rem;
+        padding: 1.5rem;
+        border-radius: 30px;
+        border-width: 2px;
+        font-size: 1.6rem;
+    }
+
+    /* Found Rental Section */
+
+    #foundRentalSection
+    {
+        margin-top: 0;
+        margin-bottom: 0;
+        background-color: initial;
+        order: 2;
+    }
+
+    #foundRentalSection h2
+    {
+        margin-left: 0;
+    }
+
+    #foundRentalSection > div
+    {
+        flex-direction: column;
+    }
+
+    #foundRentalSection > p
+    {
+        padding: 20px 0;
+    }
+
+    .foundRentalCard
+    {
+        width: 100%;
+        height: initial;
+    }
+
+    .moreFoundButton
+    {
+        font-size: 2rem;
+    }
+
+    /* Best Rental Section */
+
+    #bestRentalSection
+    {
+        margin-bottom: 0;
+        order: 1;
+    }
+
+    #bestRentalSection > div:first-of-type
+    {
+        margin: 20px 0 15px 0;
+    }
+
+    .bestRentalCard
+    {
+        margin: 15px 0;
+    }
+
+    .bestRentalCard .imageCanvas
+    {
+        padding-top: 45%;
+    }
+
+    /* Activities Section */
+
+    #activitiesSection
+    {
+        margin-top: 0;
+        margin-bottom: 30px;
+        padding-top: 0;
+        height: initial;
+    }
+
+    #activitiesSection > div
+    {
+        flex-direction: column;
+    }
+
+    #activitiesSection > div > a:not(:first-of-type)
+    {
+        margin-top: 30px;
+        flex: initial;
+    }
+
+    #activitiesSection > div > div
+    {
+        margin: 0;
+        margin-top: 30px;
+        flex: initial;
+    }
+
+    .activityCard h3
+    {
+        padding: 20px;
+    }
+
+    /* Footer */
+
+    footer
+    {
+        flex-direction: column;
+        padding: 35px 20px;
+    }
+
+    footer div
+    {
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    footer div:last-of-type
+    {
+        margin-bottom: 0;
+    }
 }
