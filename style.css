@@ -261,13 +261,17 @@ nav ul
 
 .searchCategories span
 {
-    padding: 10px 30px;
+    padding: 10px 20px 10px 30px;
     border-top: 2px solid var(--color1);
     border-right: 2px solid var(--color1);
     border-bottom: 2px solid var(--color1);
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
+    line-height: 1.4rem;
     z-index: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
 }
 
 .searchInfo
