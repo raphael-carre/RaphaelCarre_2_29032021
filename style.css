@@ -525,21 +525,6 @@ footer a
 {
     /* General */
 
-    body
-    {
-        font-size: 1.6rem;
-    }
-
-    h1, h2
-    {
-        font-size: 2.4rem;
-    }
-
-    h3
-    {
-        font-size: 2rem;
-    }
-
     section
     {
         margin: 20px;
@@ -573,18 +558,6 @@ footer a
     .cardInfo
     {
         padding: 10px;
-    }
-
-    .cardInfo p:first-of-type { font-size: 1.7rem; }
-
-    .cardInfo span
-    {
-        font-size: 1.8rem;
-    }
-
-    .fa-star
-    {
-        font-size: 1.5rem;
     }
 
     /* Header */
@@ -645,7 +618,7 @@ footer a
     header p:nth-of-type(2) a
     {
         padding: 0;
-        margin-top: 35px;
+        margin-top: 45px;
         margin-right: 20px;
         margin-left: auto;
     }
@@ -654,14 +627,14 @@ footer a
 
     #searchSection form
     {
-        margin-top: 40px;
-        margin-bottom: 40px;
+        margin-top: 30px;
+        margin-bottom: 20px;
     }
 
     #searchSection form input[type="search"]
     {
         width: 100%;
-        font-size: 1.6rem;
+        font-size: 1rem;
     }
 
     #searchSection form button
@@ -674,17 +647,6 @@ footer a
     #searchSection form button span
     {
         display: none;
-    }
-
-    .locationIcon, .searchIcon
-    {
-        padding: 1rem;
-        font-size: 1.7rem;
-    }
-
-    .locationIcon
-    {
-        width: 6rem;
     }
     
     .searchIcon
@@ -717,32 +679,9 @@ footer a
         border-color: #deebff;
     }
 
-    .searchCategories i {
-        margin-right: -25px;
-        width: 4rem;
-        height: 4rem;
-        border-radius: 30px;
-    }
-
-    .searchCategories span
-    {
-        padding: 1rem 2rem 1rem 3rem;
-        line-height: 1.7rem;
-    }
-
     .searchInfo
     {
-        margin-bottom: 40px;
-    }
-
-    .searchInfo i
-    {
-        width: 3.4rem;
-        height: 3.4rem;
-        padding: 1.5rem;
-        border-radius: 30px;
-        border-width: 2px;
-        font-size: 1.6rem;
+        margin-bottom: 30px;
     }
 
     /* Found Rental Section */
@@ -774,11 +713,6 @@ footer a
     {
         width: 100%;
         height: initial;
-    }
-
-    .moreFoundButton
-    {
-        font-size: 2rem;
     }
 
     /* Best Rental Section */
