@@ -353,10 +353,8 @@ nav ul
 {
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
-    flex: 5;
+    flex: 1;
 }
-
-.foundRentalCard .cardInfo { flex: 1 auto; }
 
 .moreFoundButton
 {
