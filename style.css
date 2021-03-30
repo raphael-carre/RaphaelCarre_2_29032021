@@ -278,6 +278,12 @@ nav ul
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
+    transition: .2s;
+}
+
+.searchCategories input[type="checkbox"]:checked + label > span
+{
+    background-color: #deebff;
 }
 
 .searchInfo
