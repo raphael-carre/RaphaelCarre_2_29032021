@@ -48,6 +48,12 @@
 
 body { font-family: 'Raleway'; }
 
+.main
+{
+    margin: 0 auto;
+    max-width: 1050px;
+}
+
 section { margin: 20px 35px; }
 
 h1, h2 { font-size: 1.2rem; }
@@ -437,6 +443,8 @@ nav ul
     flex-direction: column;
 }
 
+#activitiesSection > div > div:nth-of-type(2) { margin-right: 0; }
+
 #activitiesSection > div > div:first-of-type > .activityCard:nth-of-type(2)
 {
     margin-top: 30px;
@@ -467,11 +475,19 @@ nav ul
 
 /* Footer */
 
+.footer
+{
+    width: 100%;
+    background-color: var(--color1);
+}
+
 footer
 {
+    margin: 0 auto;
     padding: 35px 35px;
     display: flex;
     justify-content: space-between;
+    max-width: 1050px;
     background-color: var(--color1);
 }
 
