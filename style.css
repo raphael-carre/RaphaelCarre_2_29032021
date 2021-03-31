@@ -263,7 +263,6 @@ nav ul
     display: flex !important;
     justify-content: center;
     align-items: center;
-    /* margin: 0; */
     padding: 10px 13px;
     border: 1px solid var(--color1);
     border-top-left-radius: var(--border-radius);
@@ -360,6 +359,7 @@ nav ul
     margin-right: 10px;
     width: 25px;
     height: 25px;
+    padding: 10px;
     color: var(--color2);
     font-size: .8rem;
     border: 1px solid var(--color1);
@@ -662,7 +662,7 @@ footer a
     header p:nth-of-type(2)
     {
         margin-right: 0;
-        margin-bottom: auto;
+        align-self: center;
         text-align: right;
         order: 2;
     }
@@ -670,7 +670,6 @@ footer a
     header p:nth-of-type(2) a
     {
         padding: 0;
-        margin-top: 45px;
         margin-right: 20px;
         margin-left: auto;
     }
@@ -690,7 +689,6 @@ footer a
 
     #searchSection form input[type="search"]
     {
-        /* flex: 1; */
         width: 100%;
         font-size: 1rem;
     }
