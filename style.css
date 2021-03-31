@@ -120,14 +120,10 @@ h3
 
 .cardInfo
 {
-    margin: 5px 0 2px 0;
-}
-
-.cardInfo
-{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 5px 0 2px 0;
 }
 
 .cardInfo > *
@@ -142,7 +138,6 @@ h3
 
 .priceInfo span
 {
-    /* font-size: .7rem; */
     font-weight: bold;
 }
 
@@ -566,7 +561,7 @@ footer
     padding: 35px 35px;
     display: flex;
     justify-content: space-between;
-    max-width: 1050px;
+    max-width: 1150px;
     background-color: var(--color1);
 }
 
@@ -592,7 +587,7 @@ footer a
     text-decoration: none;
 }
 
-/* Small screen devices */
+/* Small and medium screen devices */
 
 @media only screen and (max-width: 970px)
 {
@@ -926,6 +921,11 @@ footer a
     .activityCard .imageCanvas
     {
         padding-top: 40%;
+    }
+
+    .bestRentalCard:not(:first-of-type)
+    {
+        margin-top: 20px;
     }
 
     .bestRentalCard .imageCanvas
