@@ -23,42 +23,22 @@
     font-style: normal;
 }
 
-@font-face
-{
-    font-family: 'Raleway';
-    src: url(fonts/Raleway-Italic.ttf) format("truetype");
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face
-{
-    font-family: 'Raleway';
-    src: url(fonts/Raleway-BlackItalic.ttf) format("truetype");
-    font-weight: bold;
-    font-style: italic;
-}
-
 *
 {
     box-sizing: border-box;
     margin: 0;
 }
 
-html
-{
-    font-size: 14px;
-}
-
 body 
 {
     font-family: 'Raleway';
+    font-size: 14px;
 }
 
 .main
 {
     margin: 0 auto;
-    max-width: 1050px;
+    max-width: 1150px;
 }
 
 section
@@ -78,13 +58,31 @@ h1
 
 h3
 {
-    font-size: .9rem;
+    font-size: .8rem;
 }
 
 .imageCanvas
 {   
     width: 100%;
     height: 100%;
+}
+
+.foundRentalCard, .bestRentalCard, .activityCard
+{
+    display: flex;
+    padding: 5px;
+    box-shadow: 2px 2px 7px rgba(177, 177, 177, 0.4);
+    border-radius: var(--border-radius);
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.foundRentalCard:hover, .bestRentalCard:hover, .activityCard:hover
+{
+    transform: scale(1.05);
+    box-shadow: 6px 6px 7px rgba(177, 177, 177, 0.2);
 }
 
 .image1 { background: url(img/lodging/lacannebiere.jpg); }
@@ -137,22 +135,15 @@ h3
     padding: 2px 5px;
 }
 
-.cardInfo p:first-of-type
+.priceInfo
 { 
-    font-size: .8rem;
+    font-size: .7rem;
 }
 
-.cardInfo span
+.priceInfo span
 {
-    font-size: .8rem;
+    /* font-size: .7rem; */
     font-weight: bold;
-}
-
-.foundRentalCard:hover, .bestRentalCard:hover, .activityCard:hover
-{
-    transform: scale(1.05);
-    box-shadow: 6px 6px 7px rgba(177, 177, 177, 0.2);
-
 }
 
 .fa-star
@@ -173,45 +164,50 @@ header
 {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 5px;
+}
+
+.logo
+{
+    margin: 25px auto 0 35px;
 }
 
 header a
 {
     display: block;
     padding: 0 25px;
-    padding-top: 35px;
-    height: 100%;
-    color: #0065fc;
+    padding-top: 40px;
+    font-size: .9rem;
+    color: #000;
     text-decoration: none;
-}
-
-nav a:hover
-{
-    padding-top: 33px;
-    border-top: 2px solid var(--color2);
-}
-
-header p:last-child
-{
-    margin-right: 10px;
-    font-weight: bold;
-}
-
-header p:last-child a:hover
-{
-    color: #83b4fd;
-}
-
-#logo
-{
-    margin: 25px auto 25px 35px;
+    transition: color .2s;
 }
 
 nav ul
 {
     display: flex;
+    padding: 0;
     height: 100%;
     list-style-type: none;
+}
+
+nav a:hover
+{
+    padding-top: 38px;
+    border-top: 2px solid var(--color2);
+    color: var(--color2);
+}
+
+header > a
+{
+    margin-right: 10px;
+    font-weight: bold;
+    color: var(--color2);
+}
+
+header > a:hover
+{
+    color: #83b4fd;
 }
 
 /* Search Section */
@@ -222,40 +218,10 @@ nav ul
     font-weight: bold;
 }
 
-#searchSection form > div
+.searchBar
 {
     margin: 10px 0;
-}
-
-#searchSection form > div:first-of-type
-{
     display: flex;
-}
-
-#searchSection input[type="search"]
-{
-    margin: 0;
-    padding: 10px;
-    border-top: 1px solid var(--color1);
-    border-right: 0;
-    border-bottom: 1px solid var(--color1);
-    border-left: 0;
-    font-weight: bold;
-    -webkit-appearance: none;
-}
-
-#searchSection input[type="checkbox"] { display: none; }
-
-#searchSection button
-{
-    padding: 10px 15px;
-    background-color: var(--color2);
-    border: 1px solid var(--color2);
-    border-top-right-radius: var(--border-radius);
-    border-bottom-right-radius: var(--border-radius);
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
 }
 
 .locationIcon
@@ -270,10 +236,39 @@ nav ul
     background-color: var(--color1);
 }
 
+.searchBar input[type="search"]
+{
+    margin: 0;
+    padding: 10px;
+    border-top: 1px solid var(--color1);
+    border-right: 0;
+    border-bottom: 1px solid var(--color1);
+    border-left: 0;
+    font-weight: bold;
+    -webkit-appearance: none;
+}
+
+.searchBar button
+{
+    padding: 10px 15px;
+    background-color: var(--color2);
+    border: 1px solid var(--color2);
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .searchIcon
 { 
     visibility: hidden;
     width: 0;
+}
+
+.searchCategories input[type="checkbox"]
+{
+    display: none;
 }
 
 .searchCategories
@@ -296,14 +291,14 @@ nav ul
     cursor: pointer;
 }
 
-.searchCategories i
+.searchCategories .fas
 {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: -20px;
-    width: 43px;
-    height: 43px;
+    width: 46px;
+    height: 46px;
     border: 2px solid #deebff;
     border-radius: 25px;
     color: var(--color2);
@@ -312,12 +307,12 @@ nav ul
     z-index: 2;
 }
 
-.searchCategories label:hover i
+.searchCategories label:hover .fas
 {
     border-color: var(--color2);
 }
 
-.searchCategories input[type="checkbox"]:checked + label > i
+.searchCategories input[type="checkbox"]:checked + label > .fas
 {
     color: #deebff;
     border-color: var(--color2);
@@ -351,7 +346,7 @@ nav ul
     align-items: center;
 }
 
-.searchInfo i
+.searchInfo .fa-info
 {
     display: flex;
     justify-content: center;
@@ -368,11 +363,14 @@ nav ul
 
 /* Found Rental Section */
 
-#rentalDiv { display: flex; }
+#rentalDiv
+{
+    display: flex;
+}
 
 #foundRentalSection
 {
-    flex: 5;
+    flex: 9;
     padding: 15px;
     border-radius: var(--border-radius);
     background-color: var(--color1);
@@ -385,25 +383,12 @@ nav ul
     margin-left: 20px;
 }
 
-#foundRentalSection > p { padding: 20px; }
 
 #foundRentalSection > div
 {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-}
-
-.foundRentalCard, .bestRentalCard, .activityCard
-{
-    display: flex;
-    padding: 5px;
-    box-shadow: 2px 2px 7px rgba(177, 177, 177, 0.4);
-    border-radius: var(--border-radius);
-    background-color: #fff;
-    color: #000;
-    text-decoration: none;
-    transition: .2s;
 }
 
 .foundRentalCard
@@ -424,6 +409,9 @@ nav ul
 
 .moreFoundButton
 {
+    display: inline-block;
+    margin-right: auto;
+    padding: 20px;
     font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
@@ -431,13 +419,16 @@ nav ul
     transition: .2s;
 }
 
-.moreFoundButton:hover { color: #888; }
+.moreFoundButton:hover
+{
+    color: #888;
+}
 
 /* Best Rental Section */
 
 #bestRentalSection
 {
-    flex: 2;
+    flex: 4;
     display: flex;
     flex-direction: column;
     margin-left: 0;
@@ -446,7 +437,7 @@ nav ul
     background-color: var(--color1);
 }
 
-#bestRentalSection > div:first-of-type
+.bestRentalTitle
 {
     display: flex;
     justify-content: space-between;
@@ -454,7 +445,12 @@ nav ul
     margin: 20px 10px 15px 10px;
 }
 
-#bestRentalSection > div:nth-child(2)
+.bestRentalTitle .fas
+{
+    font-size: 1.25rem;
+}
+
+.bestRentalContent
 {
     display: flex;
     flex-direction: column;
@@ -476,30 +472,43 @@ nav ul
     background-color: #000;
 }
 
-.bestRentalCard .cardInfo { flex: 3; }
+.bestRentalCard .cardInfo
+{
+    flex: 3;
+    padding: 5px 10px;
+}
 
-.bestRentalCard .cardInfo > p { margin-bottom: auto; }
+.bestRentalCard .priceInfo
+{
+    margin-bottom: auto;
+}
 
 /* Activities Section */
 
 #activitiesSection
 {
-    margin-bottom: 80px;
+    margin-bottom: 90px;
     height: 350px;
 }
 
-#activitiesSection h2 { margin: 20px 0; }
+#activitiesSection h2
+{
+    margin: 20px 0;
+}
 
-#activitiesSection > div
+.activitiesContent
 {
     margin: 0;
     display: flex;
     height: 100%;
 }
 
-#activitiesSection > div > a { flex: 1; }
+.activitiesContent > a
+{
+    flex: 1;
+}
 
-#activitiesSection > div > div
+.activitiesContent > div
 {
     margin: 0 30px;
     flex: 1;
@@ -507,15 +516,18 @@ nav ul
     flex-direction: column;
 }
 
-#activitiesSection > div > div:nth-of-type(2) { margin-right: 0; }
-
-#activitiesSection > div > div:first-of-type > .activityCard:nth-of-type(2)
+.activitiesContent > div:first-of-type > .activityCard:nth-of-type(2)
 {
     margin-top: 30px;
     height: 70%;
 }
 
-#activitiesSection > div > div:nth-of-type(2) > .activityCard:nth-of-type(2)
+.activitiesContent > div:last-of-type
+{
+    margin-right: 0;
+}
+
+.activitiesContent > div:last-of-type > .activityCard:not(:first-of-type)
 {
     margin-top: 30px;
 }
@@ -535,7 +547,10 @@ nav ul
     border-top-right-radius: var(--border-radius);
 }
 
-.activityCard h3 { padding: 10px; }
+.activityCard h3 
+{
+    padding: 15px;
+}
 
 /* Footer */
 
@@ -555,7 +570,10 @@ footer
     background-color: var(--color1);
 }
 
-footer div { width: 30%; }
+footer div
+{
+    width: 30%;
+}
 
 footer ul
 {
@@ -563,7 +581,10 @@ footer ul
     list-style-type: none;
 }
 
-footer li { padding: 5px 0; }
+footer li
+{
+    padding: 5px 0;
+}
 
 footer a
 {
@@ -571,9 +592,9 @@ footer a
     text-decoration: none;
 }
 
-/* Small resolution screens */
+/* Small screen devices */
 
-@media only screen and (max-width: 880px)
+@media only screen and (max-width: 970px)
 {
     /* General */
 
@@ -581,17 +602,6 @@ footer a
     {
         margin: 20px;
         padding: 0;
-    }
-
-    .foundRentalCard .imageCanvas, .activityCard .imageCanvas
-    {
-        padding-top: 58%;
-    }
-
-    .foundRentalCard:hover, .bestRentalCard:hover, .activityCard:hover
-    {
-        transform: initial;
-        box-shadow: 2px 2px 7px rgba(177, 177, 177, 0.4);
     }
 
     #rentalDiv
@@ -607,29 +617,39 @@ footer a
         border-radius: 0;
     }
 
+    .foundRentalCard:hover, .bestRentalCard:hover, .activityCard:hover
+    {
+        transform: initial;
+        box-shadow: 2px 2px 7px rgba(177, 177, 177, 0.4);
+    }
+
     .cardInfo
     {
-        padding: 10px;
+        padding: 5px;
     }
 
     /* Header */
+    
     header
     {
         flex-wrap: wrap;
         justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
     }
 
-    #logo
+    .logo
     {
-        flex: 4;
+        margin-top: 0;
         margin-left: 20px;
-        width: 100%;
+        margin-right: auto;
         order: 1;
     }
 
     nav
     {
         flex-basis: 100%;
+        margin-top: 25px;
         width: 100%;
         order: 3;
     }
@@ -649,17 +669,17 @@ footer a
     {
         padding-top: 0;
         padding-bottom: 20px;
-        border-bottom: 2px solid rgba(160,160,160,0.6);
+        border-bottom: 3px solid rgba(190,190,190,0.3);
     }
 
     nav a:hover
     {
         padding-top: 0;
         border-top: initial;
-        border-bottom: 2px solid var(--color2);
+        border-bottom: 3px solid var(--color2);
     }
 
-    header p:nth-of-type(2)
+    header > a
     {
         margin-right: 0;
         align-self: center;
@@ -667,11 +687,10 @@ footer a
         order: 2;
     }
 
-    header p:nth-of-type(2) a
+    header > a
     {
-        padding: 0;
+        padding: 5px;
         margin-right: 20px;
-        margin-left: auto;
     }
 
     /* Search Section */
@@ -687,20 +706,20 @@ footer a
         padding: 10px 16px;
     }
 
-    #searchSection form input[type="search"]
+    .searchBar input[type="search"]
     {
         width: 100%;
         font-size: 1rem;
     }
 
-    #searchSection form button
+    .searchBar button
     {
         padding: 6px;
         margin-left: -8px;
         border-radius: var(--border-radius);
     }
 
-    #searchSection form button span
+    .searchBar button span
     {
         display: none;
     }
@@ -731,7 +750,7 @@ footer a
         margin-right: 10px;
     }
 
-    .searchCategories label:hover i
+    .searchCategories label:hover .fas
     {
         border-color: #deebff;
     }
@@ -761,15 +780,20 @@ footer a
         flex-direction: column;
     }
 
-    #foundRentalSection > p
-    {
-        padding: 20px 0;
-    }
-
     .foundRentalCard
     {
         width: 100%;
         height: initial;
+    }
+
+    .foundRentalCard .imageCanvas
+    {
+        padding-top: 34%;
+    }
+
+    .moreFoundButton
+    {
+        padding: 20px 0;
     }
 
     /* Best Rental Section */
@@ -780,19 +804,19 @@ footer a
         order: 1;
     }
 
-    #bestRentalSection > div:first-of-type
+    .bestRentalTitle
     {
-        margin: 20px 0 15px 0;
+        margin: 20px 0;
     }
 
     .bestRentalCard
     {
-        margin: 15px 0;
+        margin: 6px 0;
     }
 
     .bestRentalCard .imageCanvas
     {
-        padding-top: 45%;
+        padding-top: 40%;
     }
 
     /* Activities Section */
@@ -805,22 +829,39 @@ footer a
         height: initial;
     }
 
-    #activitiesSection > div
+    .activitiesContent
     {
         flex-direction: column;
     }
 
-    #activitiesSection > div > a:not(:first-of-type)
+    .activitiesContent > a:not(:first-of-type)
     {
-        margin-top: 30px;
+        margin-top: 25px;
         flex: initial;
     }
 
-    #activitiesSection > div > div
+    .activitiesContent > div
     {
         margin: 0;
-        margin-top: 30px;
+        margin-top: 25px;
         flex: initial;
+    }
+
+    .activitiesContent > div:first-of-type > .activityCard:not(:first-of-type)
+    {
+        margin-top: 25px;
+        flex: initial;
+    }
+
+    .activitiesContent > div:last-of-type > .activityCard:not(:first-of-type)
+    {
+        margin-top: 25px;
+        flex: initial;
+    }
+
+    .activityCard .imageCanvas
+    {
+        padding-top: 38%;
     }
 
     .activityCard h3
@@ -848,7 +889,9 @@ footer a
     }
 }
 
-@media only screen and (min-width:490px) and (max-width: 880px)
+/* Medium screen devices */
+
+@media only screen and (min-width:490px) and (max-width: 970px)
 {   
     h1, h2
     {
@@ -862,8 +905,8 @@ footer a
 
     header a,
     #searchSection > p,
-    .cardInfo p:first-of-type,
-    .cardInfo span,
+    .priceInfo,
+    .priceInfo span,
     .moreFoundButton,
     footer a
     {
@@ -875,9 +918,27 @@ footer a
         font-size: 1.2rem;
     }
 
+    .foundRentalCard .imageCanvas
+    {
+        padding-top: 48%;
+    }
+
+    .activityCard .imageCanvas
+    {
+        padding-top: 40%;
+    }
+
     .bestRentalCard .imageCanvas
     {
         padding-top: 30%;
+    }
+
+    .activitiesContent > a:not(:first-of-type),
+    .activitiesContent > div,
+    .activitiesContent > div:first-of-type > .activityCard:not(:first-of-type),
+    .activitiesContent > div:last-of-type > .activityCard:not(:first-of-type)
+    {
+        margin-top: 35px;
     }
 }
 

@@ -15,14 +15,14 @@
 
         <div class="main">
             <header>
-                <p id="logo"><img src="img/reservia.svg" alt="Reservia" /></p>
+                <img src="img/reservia.svg" alt="Reservia" class="logo" />
                 <nav>
                     <ul>
                         <li><a href="#rentalDiv">Hébergements</a></li>
                         <li><a href="#activitiesSection">Activités</a></li>
                     </ul>
                 </nav>
-                <p><a href="#">S'inscrire</a></p>
+                <a href="#">S'inscrire</a>
             </header>
             
             <section id="searchSection">
@@ -30,7 +30,7 @@
                 <p>En plein centre ville ou en pleine nature</p>
             
                 <form action="#" method="post">
-                    <div>
+                    <div class="searchBar">
                         <i class="fas fa-map-marker-alt locationIcon"></i>
                         <input type="search" name="search" value="Marseille, France" />
                         <button type="submit"><span>Rechercher</span><i class="fas fa-search searchIcon"></i></button>
@@ -61,8 +61,8 @@
                         <a href="#" class="foundRentalCard">
                             <div class="imageCanvas image1"></div>
                             <div class="cardInfo">
-                                <h3>Auberge de la Cannebière</h3>
-                                <p>Nuit à partir de <span>25€</span></p>
+                                <h3>Auberge la Cannebière</h3>
+                                <p class="priceInfo">Nuit à partir de <span>25€</span></p>
                                 <div>
                                     <i class="fas fa-star fa-star-blue"></i>
                                     <i class="fas fa-star fa-star-blue"></i>
@@ -76,7 +76,7 @@
                             <div class="imageCanvas image2"></div>
                             <div class="cardInfo">
                                 <h3>Hôtel du port</h3>
-                                <p>Nuit à partir de <span>52€</span></p>
+                                <p class="priceInfo">Nuit à partir de <span>52€</span></p>
                                 <div>
                                     <i class="fas fa-star fa-star-blue"></i>
                                     <i class="fas fa-star fa-star-blue"></i>
@@ -90,7 +90,7 @@
                             <div class="imageCanvas image3"></div>
                             <div class="cardInfo">
                                 <h3>Hôtel Les mouettes</h3>
-                                <p>Nuit à partir de <span>76€</span></p>
+                                <p class="priceInfo">Nuit à partir de <span>76€</span></p>
                                 <div>
                                     <i class="fas fa-star fa-star-blue"></i>
                                     <i class="fas fa-star fa-star-blue"></i>
@@ -104,7 +104,7 @@
                             <div class="imageCanvas image4"></div>
                             <div class="cardInfo">
                                 <h3>Hôtel de la mer</h3>
-                                <p>Nuit à partir de <span>46€</span></p>
+                                <p class="priceInfo">Nuit à partir de <span>46€</span></p>
                                 <div>
                                     <i class="fas fa-star fa-star-blue"></i>
                                     <i class="fas fa-star fa-star-blue"></i>
@@ -118,7 +118,7 @@
                             <div class="imageCanvas image5"></div>
                             <div class="cardInfo">
                                 <h3>Auberge Le Panier</h3>
-                                <p>Nuit à partir de <span>23€</span></p>
+                                <p class="priceInfo">Nuit à partir de <span>23€</span></p>
                                 <div>
                                     <i class="fas fa-star fa-star-blue"></i>
                                     <i class="fas fa-star fa-star-blue"></i>
@@ -132,7 +132,7 @@
                             <div class="imageCanvas image6"></div>
                             <div class="cardInfo">
                                 <h3>Hôtel chez Amina</h3>
-                                <p>Nuit à partir de <span>96€</span></p>
+                                <p class="priceInfo">Nuit à partir de <span>96€</span></p>
                                 <div>
                                     <i class="fas fa-star fa-star-blue"></i>
                                     <i class="fas fa-star fa-star-blue"></i>
@@ -143,20 +143,20 @@
                             </div>
                         </a>
                     </div>
-                    <p><a href="#" class="moreFoundButton">Afficher plus</a></p>
+                    <a href="#" class="moreFoundButton">Afficher plus</a>
                 </section>
             
                 <section id="bestRentalSection">
-                    <div>
+                    <div class="bestRentalTitle">
                         <h2>Les plus populaires</h2>
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <div>
+                    <div class="bestRentalContent">
                         <a href="#" class="bestRentalCard">
                             <div class="imageCanvas image7"></div>
                             <div class="cardInfo">
                                 <h3>Hôtel Le soleil du matin</h3>
-                                <p>Nuit à partir de <span>128€</span></p>
+                                <p class="priceInfo">Nuit à partir de <span>128€</span></p>
                                 <div>
                                     <i class="fas fa-star fa-star-blue"></i>
                                     <i class="fas fa-star fa-star-blue"></i>
@@ -170,7 +170,7 @@
                             <div class="imageCanvas image8"></div>
                             <div class="cardInfo">
                                 <h3>Au coeur de l'eau Chambres d'hôtes</h3>
-                                <p>Nuit à partir de <span>71€</span></p>
+                                <p class="priceInfo">Nuit à partir de <span>71€</span></p>
                                 <div>
                                     <i class="fas fa-star fa-star-blue"></i>
                                     <i class="fas fa-star fa-star-blue"></i>
@@ -184,7 +184,7 @@
                             <div class="imageCanvas image9"></div>
                             <div class="cardInfo">
                                 <h3>Hôtel Tout bleu et blanc</h3>
-                                <p>Nuit à partir de <span>68€</span></p>
+                                <p class="priceInfo">Nuit à partir de <span>68€</span></p>
                                 <div>
                                     <i class="fas fa-star fa-star-blue"></i>
                                     <i class="fas fa-star fa-star-blue"></i>
@@ -200,7 +200,7 @@
             
             <section id="activitiesSection">
                 <h2>Activités à Marseille</h2>
-                <div>
+                <div class="activitiesContent">
                     <a href="#" class="activityCard">
                         <div class="imageCanvas activityImage1"></div>
                         <h3>Vieux Port</h3>
